@@ -1,0 +1,19 @@
+{
+  "name": "avanti-tool-room",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "muskan",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^16.0.1"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.7.1",
+    "electron-require": "^0.3.0",
+    "mysql": "^2.18.1"
+  }
+}

@@ -1,0 +1,79 @@
+html, body{
+    /* background-color: blue; */
+    font-family: Roboto, sans-serif;
+    margin: 0px;
+    /* border: 1px solid black; */
+}
+
+.container-fluid{
+    border: 1px solid black;
+
+    position: relative;
+
+    /* height: 767px; */
+}
+
+.full-height{
+    margin: 0px;
+    height: 100vh;
+}
+
+.container-fluid-box{
+    background-color: #5C5C99;
+    margin-left: -15px;
+    margin-right: -15px;
+    height: 100%;
+}
+
+
+/* --------No scroll is coming and div are of full size ---------- */
+
+
+.container-fluid-loginbox{
+    background-color: white;
+    position: absolute;
+    margin: 12px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.row{
+    border: 1px solid green;
+
+}
+
+.col-1, .col-4, .col-6{
+        border: 0px solid red;
+}
+
+.form-box{
+    padding-top: 14%;
+}
+
+.img-box{
+    padding-top: 6%;
+    padding-right: 6%;
+}
+
+.avanti-tool-room{
+    font-size: 50px;
+    font: Roboto;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.div-line{
+    display: grid;
+    height: 500px;
+    border-right: 1px solid grey;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loginbtn{
+
+}

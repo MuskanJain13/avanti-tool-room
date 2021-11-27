@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="style.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <title>AVANTI TOOL ROOM</title>
+
+    </head>
+    <body>
+        <div class="container-fluid full-height">
+
+            <div class="container-fluid-box">
+                <div class="container-fluid-loginbox">
+                    <div class="container-fluid row" style="margin: 0; height: 100%;">
+                        <div class="col-1">
+
+                        </div>
+                        <div class="col-4 form-box" style="padding-left: 6%; padding-right: 6%;">
+                            <form action="inventory.html" method="post" class="needs-validation" novalidate>
+                                    <div class="form-group">
+                                        <label for="username">Username</label>
+                                        <input type=" text" readonly class="form-control" id="username" placeholder="Admin">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input onchange="checkPassword()" type="password" class="form-control" id="password" placeholder="Password" required>
+                                        <div class="invalid-feedback">
+                                            Please enter a valid password!
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="form-group">
+                                        <label class="form-check-label"><a href="#">Forgot Password?</a></label>
+                                    </div> -->
+                                    <br><br>
+                                    <button id="loginID" onclick="checkPassword()" type="submit" class="btn mb-2 loginbtn" style="display: grid; margin: auto; background-color: #FFA64C; color: white;">Login</button>
+                            </form>
+                        </div>
+                        <div class="col-1">
+                            <div class="div-line">
+
+                            </div>
+                        </div>
+                        <div class="col-6 img-box">
+                            <img src="images/avantika-logo.svg" height="100px" style="display: grid; margin: auto;" alt="avantika-logo"><br><br>
+                            <div class="avanti-tool-room">Avanti Tool Room</div><br>
+                            <img src="images/girl.svg" height="290px" style="margin-left: 40px; float: left;" alt="girl">
+                            <img src="images/tools.png" height="90px" style="margin-left: 13%; margin-right: 13%; float: left;" alt="tools">
+                            <img src="images/boy.svg" height="290px" style="margin-right: 40px; float: right;" alt="boy">
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- Modal HTML -->
+            <div id="myModal" class="modal fade">
+            	<div class="modal-dialog modal-confirm">
+            		<div class="modal-content">
+            			<div class="modal-header">
+            				<div class="icon-box">
+            					<i class="material-icons">&#xE876;</i>
+            				</div>
+            				<h4 class="modal-title w-100">Awesome!</h4>
+            			</div>
+            			<div class="modal-body">
+            				<p class="text-center">Your booking has been confirmed. Check your email for detials.</p>
+            			</div>
+            			<div class="modal-footer">
+            				<button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+            			</div>
+            		</div>
+            	</div>
+            </div>
+        </div>
+
+
+        <script type="text/javascript">
+
+        // mysql connectivity
+
+            var mysql = require('mysql');
+            var connection = mysql.createConnection({
+              host     : 'localhost',
+              user     : 'root',
+              password : null,
+              database : 'workshop_management'
+            });
+
+            connection.connect();
+
+            var pwd;
+            var rightPwd;
+
+            $sql = "SELECT `password` FROM `admin` WHERE `username` = 'admin'";
+            connection.query($sql, function (error, results, fields) {
+            rightPwd = results[0].password;
+            if (error) throw error;
+            console.log(results);
+            });
+
+            // var loginBTN = document.getElementById("loginID");
+
+            function checkPassword() {
+
+                pwd = document.getElementById("password").value;
+
+                //mysql data fetching
+
+                console.log(rightPwd);
+
+                if (pwd != rightPwd)
+                {
+                    console.log(pwd);
+                    console.log(rightPwd);
+                    password.setCustomValidity("Wrong");
+                }
+                else {
+                    // password.setCustomValidity("");      //tick mark will come if we'll uncomment this line
+
+                    // loginBTN.data-toggle = "modal";
+                    // loginBTN.data-target="#myModal";
+
+                    window.location.href = "inventory.html";
+                }
+
+                // connection.end();
+            }
+
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (() => {
+              'use strict';
+
+              // Fetch all the forms we want to apply custom Bootstrap validation styles to
+              const forms = document.querySelectorAll('.needs-validation');
+
+              // Loop over them and prevent submission
+              Array.prototype.slice.call(forms).forEach((form) => {
+                form.addEventListener('submit', (event) => {
+                  if (!form.checkValidity() && pwd != rightPwd) {   //Here with the validation the condition is also checked for correct password
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+                }, false);
+              });
+            })();
+
+        </script>
+
+    </body>
+</html>

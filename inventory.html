@@ -28,18 +28,27 @@
                                             <div class="col-8">
                                                 <div class="row toolbar-r" style="background-color: #F3F3E6;">
                                                     <div class="col toolbar" style="border: 0px solid black; border-radius: 0 0 0 10px;">
-                                                        <div class="container-fluid add-icon"  onmouseover="this.style.backgroundColor='#99E6F7'" onmouseout="this.style.backgroundColor='#fff'" style="border: 0px solid black; cursor: pointer; border-radius: 0 0 10px 10px; width: 60px; height: 45px; background-color: #fff">
-                                                            <a href="add-inventory.html"><img src="images/add.svg" style="position: absolute;" class="center" height="40px" alt="tools"></a>
+                                                        <div class="container-fluid add-icon"  onmouseover="this.style.backgroundColor='#99E6F7'" onmouseout="this.style.backgroundColor='#fff'" style="border: 0px solid black; cursor: pointer; border-radius: 0 0 10px 10px; width: 50%; height: 85%; background-color: #fff">
+                                                            <a href="add-inventory.html"><img src="images/add.svg" style="top: 35%;" class="center" height="35rem" alt="tools"></a>
+                                                            <div class="row" style="position: absolute; bottom: 1%; font-size: 0.75rem; color: #5C5C99; border: 0px solid black; margin: auto; font-weight: 500;">
+                                                                Add
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="col toolbar" style="border: 0px solid black;">
-                                                        <div class="container-fluid delete-icon"  onmouseover="this.style.backgroundColor='#99E6F7'" onmouseout="this.style.backgroundColor='#fff'" style="border: 0px solid black; cursor: pointer; border-radius: 0 0 10px 10px; width: 60px; height: 45px; background-color: #fff">
-                                                            <a href="delete-inventory.html"><img src="images/delete.svg" style="position: absolute;" class="center" height="40px" alt="tools"></a>
+                                                        <div class="container-fluid add-icon"  onmouseover="this.style.backgroundColor='#99E6F7'" onmouseout="this.style.backgroundColor='#fff'" style="border: 0px solid black; cursor: pointer; border-radius: 0 0 10px 10px; width: 50%; height: 85%; background-color: #fff">
+                                                            <a href="delete-inventory.html"><img src="images/delete.svg" style="top: 35%;" class="center" height="35rem" alt="tools"></a>
+                                                            <div class="row" style="position: absolute; bottom: 1%; font-size: 0.75rem; color: #5C5C99; border: 0px solid black; margin: auto; font-weight: 500;">
+                                                                Delete
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="col toolbar" style="border: 0px solid black; border-radius: 0 0 10px 0;">
-                                                        <div class="container-fluid"  onmouseover="this.style.backgroundColor='#99E6F7'" onmouseout="this.style.backgroundColor='#fff'" style="border: 0px solid black; cursor: pointer; border-radius: 0 0 10px 10px; width: 60px; height: 45px; background-color: #fff">
-                                                            <a href="edit-inventory.html"><img src="images/edit.svg" style="position: absolute;" class="center" height="40px" alt="tools"></a>
+                                                        <div class="container-fluid add-icon"  onmouseover="this.style.backgroundColor='#99E6F7'" onmouseout="this.style.backgroundColor='#fff'" style="border: 0px solid black; cursor: pointer; border-radius: 0 0 10px 10px; width: 50%; height: 85%; background-color: #fff">
+                                                            <a href="edit-inventory.html"><img src="images/edit.svg" style="top: 35%;" class="center" height="35rem" alt="tools"></a>
+                                                            <div class="row" style="position: absolute; bottom: 1%; font-size: 0.75rem; color: #5C5C99; border: 0px solid black; margin: auto; font-weight: 500;">
+                                                                Edit
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -49,47 +58,82 @@
                                     </div>
                                     <div class="col-3"></div>
                                 </div>
-                                <div class="row" style="border: 0px solid yellow;">
-                                    h
+                                <div class="row" id="date-div" style="border: 0px solid yellow; margin: 2% 5%;">
+                                    <!-- <div style="text-align:center;padding:1em 0;"><iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=small&timezone=Asia%2FKolkata" width="100%" height="90" frameborder="0" seamless></iframe> </div> -->
+                                </div>
+                                <div class="row" style="border: 0px solid yellow; margin: 2% 5%;">
+                                    <div class="col-3" style="border: 0px solid yellow; background-color: #FFA64C; padding: 4%;">
+                                        col 1
+                                    </div>
+                                    <div class="col-2" style="border: 0px solid yellow;padding: 4%;">
+                                        col 1
+                                    </div>
+                                    <div class="col-5" style="border: 0px solid yellow; background-color: #FFA64C; padding: 4%;">
+
+                                    </div>
+                                    <div class="col-2" style="border: 0px solid yellow;padding: 4%;">
+                                        col 1
+                                    </div>
+                                </div>
+                                <div class="row" style="border: 0px solid yellow; margin: 1.5% 5%; font-size: 1.5rem; color: #5C5C99;">
+                                    Items By Category
+                                </div>
+                                <div class="row" style="border: 0px solid red; margin: 0% 5%; height: 20rem;">
+                                    <div class="col-6" style="border: 0px solid pink;">
+                                        <div class="row" style="border: 0px solid black; margin-bottom: 2%; margin-right: 4%; ">
+                                            Consumable Items
+                                        </div>
+                                        <div class="row scroll" id="table-consumable" style="border: 1px solid #F3F3E6; margin-top: 4%; margin-right: 4%; max-height: 18rem; overflow-y: scroll; padding-right: 0.2%;">
+                                            <!-- Table 1 -->
+                                        </div>
+                                    </div>
+                                    <div class="col-6" style="border: 0px solid red;">
+                                        <div class="row" style="border: 0px solid black; margin-bottom: 2%; margin-left: 4%; ">
+                                            Non-Consumable Items
+                                        </div>
+                                        <div class="row scroll" id="table-non-consumable" style="border: 1px solid #F3F3E6; margin-top: 4%; margin-left: 4%; max-height: 18rem; overflow-y: scroll; padding-right: 0.2%;">
+                                            <!-- Table 2 -->
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-1" style="border: 0px solid violet;">       <!-- This is the code for rightside menubar -->
                                 <div class="menubar h-100" style="position: relative; border-right: 2px solid #fff;">
                                     <div class="container-fluid" onmouseover="this.style.backgroundColor='#FFA64C';" onmouseout="this.style.backgroundColor='transparent';" style="cursor: pointer; border-radius: 10px 0 0 10px; float: right; margin-top: 35%; width: 65%; height: 7%; background-color: transparent">
-                                        <div class="row" style="border: 0px solid black; margin-left: 0px;">
+                                        <div class="row" style="border: 0px solid black; margin-top: 5%; display: flex; flex-direction: row; justify-content: center;">
                                             <a href="index.html"><i class="bi bi-box-arrow-right" style="font-size: 2rem; color: #fff;"></i></a>
                                         </div>
                                     </div>
-                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7'; this.style.color='#000';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#5C5C99';" style="cursor: pointer; border-radius: 10px 0 0 10px; float: right; margin-top: 100%; width: 75%; height: 9.5%; background-color: #fff">
-                                        <div class="row" style="border: 0px solid black; margin-left: 0px; margin-top: 5%;">
+                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7'; this.style.color='#000';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#5C5C99';" style="cursor: pointer; border-radius: 10px 0 0 10px; float: right; margin-top: 100%; width: 80%; height: 9.5%; background-color: #fff">
+                                        <div class="row" style="border: 0px solid black; margin-top: 5%; display: flex; flex-direction: row; justify-content: center;">
                                             <a href="issue.html"><i class="bi bi-pencil-square" style="font-size: 2rem; color: #5C5C99;"></i></a>
                                         </div>
-                                        <div style="position: absolute; bottom: 5%; font-size: 0.9rem;">
+                                        <div style="position: absolute; bottom: 5%; font-size: 0.8rem; margin-left: 6%; color: #5C5C99; font-weight: 500;">
                                             Issue
                                         </div>
                                     </div>
-                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7'; this.style.color='#000';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#5C5C99';" style="cursor: pointer; border-radius: 10px 0 0 10px; float: right; margin-top: 40%; width: 75%; height: 9.5%; background-color: #fff">
-                                        <div class="row" style="border: 0px solid black; margin-left: 0px; margin-top: 5%;">
+                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7'; this.style.color='#000';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#5C5C99';" style="cursor: pointer; border-radius: 10px 0 0 10px; float: right; margin-top: 40%; width: 80%; height: 9.5%; background-color: #fff">
+                                        <div class="row" style="border: 0px solid black; margin-top: 5%; display: flex; flex-direction: row; justify-content: center;">
                                             <a href="return.html"><i class="bi bi-arrow-return-left" style="font-size: 2rem; color: #5C5C99;"></i></a>
                                         </div>
-                                        <div style="position: absolute; bottom: 5%; font-size: 0.9rem;">
+                                        <div style="position: absolute; bottom: 5%; font-size: 0.8rem; margin-left: 2%; color: #5C5C99; font-weight: 500;">
                                             Return
                                         </div>
                                     </div>
-                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7'; this.style.color='#000';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#5C5C99';" style="cursor: pointer; border-radius: 10px 0 0 10px; float: right; margin-top: 40%; width: 75%; height: 9.5%; background-color: #fff">
-                                        <div class="row" style="border: 0px solid black; margin-left: 0px; margin-top: 5%;">
+                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7'; this.style.color='#000';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#5C5C99';" style="cursor: pointer; border-radius: 10px 0 0 10px; float: right; margin-top: 40%; width: 80%; height: 9.5%; background-color: #fff">
+                                        <div class="row" style="border: 0px solid black; margin-top: 5%; display: flex; flex-direction: row; justify-content: center;">
                                             <a href="people.html"><i class="bi bi-person-lines-fill" style="font-size: 2rem; color: #5C5C99;"></i></a>
                                         </div>
-                                        <div style="position: absolute; bottom: 5%; font-size: 0.9rem; color: #5C5C99;">
+                                        <div style="position: absolute; bottom: 5%; font-size: 0.8rem; margin-left: 1%; color: #5C5C99; font-weight: 500;">
                                             People
                                         </div>
                                     </div>
-                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7';" onmouseout="this.style.backgroundColor='#99E6F7';" style="cursor: pointer; border-bottom: 1px solid #5C5C99; border-left: 1px solid #5C5C99; border-top: 1px solid #5C5C99; box-shadow: -2px 2px 8px #aaaaaa; border-radius: 10px 0 0 10px; float: right; margin-top: 40%; width: 75%; height: 9.5%; background-color: #99E6F7">
-                                        <div class="row" style="border: 0px solid black; margin-left: 0px; margin-top: 5%;">
-                                            <i class="bi bi-tools" style="font-size: 2rem; color: #5C5C99;"></i>
+                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7';" onmouseout="this.style.backgroundColor='#99E6F7';" style="cursor: pointer; border-bottom: 1px solid #5C5C99; border-left: 1px solid #5C5C99; border-top: 1px solid #5C5C99; box-shadow: -2px 2px 8px #aaaaaa; border-radius: 10px 0 0 10px; float: right; margin-top: 40%; width: 80%; height: 9.5%; background-color: #99E6F7">
+                                        <div class="row" style="border: 0px solid black; margin-top: 5%; display: flex; flex-direction: row; justify-content: center;">
+                                            <a href="inventory.html"><i class="bi bi-tools" style="font-size: 2rem; color: #5C5C99;"></i></a>
                                         </div>
-                                        <div style="position: absolute; bottom: 5%; font-size: 0.9rem; color: #5C5C99;">
-                                            Tools
+                                        <div style="position: absolute; bottom: 5%; font-size: 0.8rem; margin-left: -11%; color: #5C5C99; font-weight: 500;">
+                                            Inventory
                                         </div>
                                     </div>
                                     <div class="container-fluid" onmouseover="this.style.backgroundColor='#FFA64C'; this.style.color='#5C5C99';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#fff';" style="cursor: pointer; background-color: transparent; position: absolute; bottom: 3%; float: right;">
@@ -100,8 +144,6 @@
                                             </div>
                                         </div>
                                     </div>
-
-
                                 </div>
                             </div>
                         </div>
@@ -109,7 +151,94 @@
                 </div>
             </div
         </div>
+        <script type="text/javascript">
+        //current datetime
+        var today = new Date();
+        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        var time = today.getHours() + ":" + today.getMinutes() +  ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+        console.log(dateTime);
+        document.getElementById('date-div').innerHTML = "DATE-TIME: "+dateTime;
+        // mysql connectivity
+        var mysql = require('mysql');
+        var connection = mysql.createConnection({
+          host     : 'localhost',
+          user     : 'root',
+          password : null,
+          database : 'workshop_management'
+        });
+        connection.connect();
+        fetch_item_details();
+        function fetch_item_details () {
+            $fetch_c_items = "SELECT `catCode`, `category`, `t_qty` FROM `inventory` WHERE `type` = 'Consumable'";
+            $fetch_n_items = "SELECT `catCode`, `category`, `t_qty` FROM `inventory` WHERE `type` = 'Non-Consumable'";
+            //Fetching consumable item table
+            connection.query($fetch_c_items, function (error, results, fields) {     //Executing query 1
+                if (error) {
+                    throw error;
+                    output1 = "Fetch Consumable Items fail";
+                    let empty_div = '<div class="row text-warning" id="empty_result_div" style="border: 0px solid yellow; margin: 0px;">No Item Found!</div>';
+                    document.getElementById("table-consumable").innerHTML = empty_div;
+                } else if (!results.length) {
+                    let empty_div = '<div class="row text-warning" id="empty_result_div" style="border: 0px solid yellow; margin: 0px;">No Item Found!</div>';
+                    document.getElementById("table-consumable").innerHTML = empty_div;
+                }else {
+                    output1 = "Fetch Consumable Items Success";
+                    console.log(results);
+                    var string = JSON.stringify(results);
+                    var json = JSON.parse(string);
+                    console.log(json);
+                    let table = '<table class="table table-hover" id="consumable-table">';
+                    table += '<thead style="background-color: #F3F3E6;"><tr><th scope="col">CatCode</th><th scope="col">Category</th><th scope="col">Qty</th></tr></thead>';
+                    table += "<tbody>";
+                    var x = json.length;
+                    for (var i = 0; i < x; i++) {
+                        table = table + "<tr>";
+                        table = table + `<th scope="row">${json[i].catCode}</th>`;
+                        table = table + `<td>${json[i].category}</td>`;
+                        table = table + `<td>${json[i].t_qty}</td>`;
+                        table = table + "</tr>";
+                    }
+                    table += "</tbody></table>";
+                    document.getElementById("table-consumable").innerHTML = table;
+                }
+                console.log(output1);
+            });
+            //Fetching non-consumable item table
+            connection.query($fetch_n_items, function (error, results, fields) {     //Executing query 1
+                if (error) {
+                    throw error;
+                    output2 = "Fetch Non-Consumable Items Fail";
+                    let empty_div = '<div class="row text-warning" id="empty_result_div" style="border: 0px solid yellow; margin: 0px;">No Item Found!</div>';
+                    document.getElementById("table-non-consumable").innerHTML = empty_div;
+                } else if (!results.length) {
+                    let empty_div = '<div class="row text-warning" id="empty_result_div" style="border: 0px solid yellow; margin: 0px;">No Item Found!</div>';
+                    document.getElementById("table-non-consumable").innerHTML = empty_div;
+                }else {
+                    output2 = "Fetch Non-Consumable Items Success";
+                    console.log(results);
+                    var string = JSON.stringify(results);
+                    var json = JSON.parse(string);
+                    console.log(json);
+                    let table = '<table class="table table-hover" id="non-table">';
+                    table += '<thead style="background-color: #F3F3E6;"><tr><th scope="col">CatCode</th><th scope="col">Category</th><th scope="col">Qty</th></tr></thead>';
+                    table += "<tbody>";
+                    var x = json.length;
+                    for (var i = 0; i < x; i++) {
+                        table = table + "<tr>";
+                        table = table + `<th scope="row">${json[i].catCode}</th>`;
+                        table = table + `<td>${json[i].category}</td>`;
+                        table = table + `<td>${json[i].t_qty}</td>`;
+                        table = table + "</tr>";
+                    }
+                    table += "</tbody></table>";
+                    document.getElementById("table-non-consumable").innerHTML = table;
+                }
+                console.log(output2);
+            });
+        }
 
+        </script>
 
     </body>
 </html>

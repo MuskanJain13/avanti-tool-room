@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="return-style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+        <title>AVANTI TOOL ROOM</title>
+    </head>
+    <body>
+        <div class="container-fluid full-height">
+            <div class="container-fluid-box">
+                <div class="container-fluid-loginbox" style="border: 0px solid blue; ">
+                    <div class="container-fluid h-100" style="border: 0px solid green;">
+                        <div class="row h-100" style="border: 0px solid red;">
+                            <div class="col-11" style="border: 0px solid violet;">
+                                <div class="row" style="border: 0px solid yellow; height: 10%; margin: 0 4% 0 4%; padding-top: 2%;">
+                                    <h1 style="font-size: 2.5rem; font-weight: normal; color: #5C5C99;">Return Item</h1>
+                                </div>
+                                <div class="row" style="border-top: 1px solid #5C5C99; margin: 1% 4% 0 4%;" ></div>
+                                <form method="post" class="needs-validation" novalidate style="border: 0px solid red;">
+                                    <div class="row" style="border: 0px solid red; background-color: #F3F3E6; margin: 1.5% 4% 1% 4%; padding: 0.8% 0;">
+                                        <div class="row" style="border: 0px solid blue; width: 100%; margin: 0px;">
+                                            <div class="col-3" style="border: 0px solid yellow; padding: 0.3% 6% 0 2%;">
+                                                <div class="form-group">
+                                                    <select onchange="clear_id()" id="user_type" class="form-control" name="user" required>
+                                                        <option selected disabled>Select User</option>
+                                                        <option value="Student">Student</option>
+                                                        <option value="Employee">Employee</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-3" style="border: 0px solid yellow; padding: 0.3% 6% 0 2%;">
+                                                <div class="form-group">
+                                                    <input type=" text" onkeyup="check_id()" disabled class="form-control" id="userId" placeholder="Enter User ID" required>
+                                                    <div class="invalid-feedback">
+                                                        Enter a valid user id!
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6" style="border: 0px solid black; padding: 0.3% 3.5% 0.3% 25%;">
+                                                <div class="row">
+                                                    <div id="searchId-feedback" class="form-control" style="text-align: center; visibility: hidden; border-radius: 20px; color: darkgrey; border: 0px solid black; background-color: transparent; box-shadow: 0px 0px 0px; font-size: 1rem;">
+                                                        Invalid Id!
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="row" id="detail-1" style="display: none; border: 0px solid yellow; margin: 0% 4%; padding: 0.6% 0;">
+                                    <p style="font-size: 1.5rem; color: #5C5C99;">Details</p>
+                                </div>
+                                <div class="row" id="detail-2" style="display: none; border: 0px solid red; background-color: #F3F3E6; margin: 0 4% 0 4%; padding: 0.8% 0;">
+                                    <div class="row" style="border: 0px solid blue; width: 100%; margin: 0px;">
+                                        <div class="col-3" style="border: 0px solid black; display: flex; justify-content: center; align-items: center;">
+                                            <div class="container-fluid" style="border-right: 2px solid darkgrey; margin: 8% 0; padding: 12% 0;">
+                                                <div class="container" id="profile-pic" style="border: 0px solid red; background-color: white; border-radius: 100px; height: 8rem; width: 8rem; margin-bottom: 7%;"></div>
+                                                <div class="row" id="name-row" style="border: 0px solid black; justify-content: center; margin-bottom: 3%;">NAME</div>
+                                                <div class="row" id="userId-row" style="border: 0px solid black; justify-content: center; margin-bottom: 3%;">USER ID</div>
+                                                <div class="row" id="profile-row" style="border: 0px solid black; justify-content: center;">PROFILE</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-9" style="border: 0px solid black; padding: 4%;">
+                                            <div class="container-fluid" style="border: 0px solid red; background-color: white; padding: 2% 8%;">
+                                                <div class="row" style="border: 0px solid black; color: #5C5C99; margin-bottom: 3%;">
+                                                    <h5>Items To Be Returned</h5>
+                                                </div>
+                                                <div class="row" id="table-row-div" style="border: 0px solid yellow; height: 13.5rem; overflow-y: scroll;">
+                                                    <!-- TABLE DIV -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1" style="border: 0px solid violet;">       <!-- This is the code for rightside menubar -->
+                                <div class="menubar h-100" style="position: relative; border-right: 2px solid #fff;">
+                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#FFA64C';" onmouseout="this.style.backgroundColor='transparent';" style="cursor: pointer; border-radius: 10px 0 0 10px; float: right; margin-top: 35%; width: 65%; height: 7%; background-color: transparent">
+                                        <div class="row" style="border: 0px solid black; margin-top: 5%; display: flex; flex-direction: row; justify-content: center;">
+                                            <a href="index.html"><i class="bi bi-box-arrow-right" style="font-size: 2rem; color: #fff;"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7'; this.style.color='#000';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#5C5C99';" style="cursor: pointer; border-radius: 10px 0 0 10px; float: right; margin-top: 100%; width: 80%; height: 9.5%; background-color: #fff;">
+                                        <div class="row" style="border: 0px solid black; margin-top: 5%; display: flex; flex-direction: row; justify-content: center;">
+                                            <a href="issue.html"><i class="bi bi-pencil-square" style="font-size: 2rem; color: #5C5C99;"></i></a>
+                                        </div>
+                                        <div style="position: absolute; bottom: 5%; font-size: 0.8rem; margin-left: 6%; color: #5C5C99; font-weight: 500;">
+                                            Issue
+                                        </div>
+                                    </div>
+                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7';" onmouseout="this.style.backgroundColor='#99E6F7'; this.style.color='#5C5C99';" style="border-bottom: 1px solid #5C5C99; border-left: 1px solid #5C5C99; border-top: 1px solid #5C5C99; box-shadow: -2px 2px 8px #aaaaaa; border-radius: 10px 0 0 10px; float: right; margin-top: 40%; width: 80%; height: 9.5%; background-color: #99E6F7;">
+                                        <div class="row" style="border: 0px solid black; margin-top: 5%; display: flex; flex-direction: row; justify-content: center;">
+                                            <a href="return.html"><i class="bi bi-arrow-return-left" style="font-size: 2rem; color: #5C5C99;"></i></a>
+                                        </div>
+                                        <div style="position: absolute; bottom: 5%; font-size: 0.8rem; margin-left: 2%; color: #5C5C99; font-weight: 500;">
+                                            Return
+                                        </div>
+                                    </div>
+                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7'; this.style.color='#000';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#5C5C99';" style="cursor: pointer; border-radius: 10px 0 0 10px; float: right; margin-top: 40%; width: 80%; height: 9.5%; background-color: #fff">
+                                        <div class="row" style="border: 0px solid black; margin-top: 5%; display: flex; flex-direction: row; justify-content: center;">
+                                            <a href="people.html"><i class="bi bi-person-lines-fill" style="font-size: 2rem; color: #5C5C99;"></i></a>
+                                        </div>
+                                        <div style="position: absolute; bottom: 5%; font-size: 0.8rem; margin-left: 1%; color: #5C5C99; font-weight: 500;">
+                                            People
+                                        </div>
+                                    </div>
+                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7'; this.style.color='#000';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#5C5C99';" style="cursor: pointer; border-radius: 10px 0 0 10px; border-radius: 10px 0 0 10px; float: right; margin-top: 40%; width: 80%; height: 9.5%;background-color: #fff">
+                                        <div class="row" style="border: 0px solid black; margin-top: 5%; display: flex; flex-direction: row; justify-content: center;">
+                                            <a href="inventory.html"><i class="bi bi-tools" style="font-size: 2rem; color: #5C5C99;"></i></a>
+                                        </div>
+                                        <div style="position: absolute; bottom: 5%; font-size: 0.8rem; margin-left: -11%; color: #5C5C99; font-weight: 500;">
+                                            Inventory
+                                        </div>
+                                    </div>
+                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#FFA64C'; this.style.color='#5C5C99';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#fff';" style="cursor: pointer; background-color: transparent; position: absolute; bottom: 3%; float: right;">
+                                        <div class="row" style="border: 0px solid black; margin-left: -15px;">
+                                            <i class="bi bi-info-square" style="font-size: 1.2rem; margin-left: 26%; color: #fff;"></i>
+                                            <div style="font-size: 1rem; margin-left: 7%; color: #fff;">
+                                                Help
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Large modal -->
+            <div class="modal fade bd-example-modal-lg" id="return-form-modal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="row" style="border: 0px solid yellow; margin: 1% 6% 0 6%; padding-top: 1.5%;">
+                        <p style="font-size: 1.5rem; color: #5C5C99;">Enter The Details</p>
+                    </div>
+                    <form method="post" class="needs-validation" novalidate style="border: 0px solid red;">
+                        <div class="row" style="border: 0px solid red; background-color: #F3F3E6; margin: 1% 6% 4% 6%; padding: 2%;">
+                            <div class="row" style="border: 0px solid blue; width: 100%; margin: 0px;">
+                                <div class="col-5" style="border: 0px solid yellow; padding: 0.3% 6% 0 2%;">
+                                    <div class="form-group">
+                                        <label for="catCode">Category Code</label>
+                                        <input class="form-control" id="catCode" readonly required>
+                                    </div>
+                                </div>
+                                <div class="col-5" style="border: 0px solid yellow; padding: 0.3% 6% 0 2%;">
+                                    <div class="form-group">
+                                        <label for="specificItem">Specific Item</label>
+                                        <input class="form-control" id="specificItem" readonly required>
+                                    </div>
+                                </div>
+                                <div class="col-2" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
+                                    <div class="form-group" style="display: none;">
+                                        <input class="form-control" id="tid" readonly required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="border: 0px solid blue; width: 100%; margin: 0px;">
+                                <div class="col-5" style="border: 0px solid yellow; padding: 0.3% 6% 0 2%;">
+                                    <div class="form-group">
+                                        <label for="returnOption">Returning Options</label>
+                                        <select id="returnOption" onchange="change_itemCondition()" class="form-control" required>
+                                            <option selected disabled>Choose Option</option>
+                                            <option value="Returnable">Returnable</option>
+                                            <option value="Non-Returnable">Non-Returnable</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Select a valid option!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-5" style="border: 0px solid yellow; padding: 0.3% 6% 0 2%;">
+                                    <div class="form-group">
+                                        <label for="itemCondition">Item Condition</label>
+                                        <select id="itemCondition" class="form-control" disabled required>
+                                            <option selected disabled>Choose Option</option>
+                                            <option value="Original">Original</option>
+                                            <option value="Damaged">Damaged</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Select a valid option!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2" style="border: 0px solid yellow; padding: 0.3% 3.5%;"></div>
+                            </div>
+                            <div class="row" style="border: 0px solid blue; width: 100%; margin: 0px;">
+                                <div class="col-10" style="border: 0px solid yellow; padding: 0.3% 6% 0 2%;">
+                                    <div class="form-group">
+                                        <label for="description">Description</label>
+                                        <textarea class="form-control" id="description" name="description" rows="3" cols="75" style="resize: none;"></textarea>
+                                        <div class="invalid-feedback">
+                                            Select a valid option!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2" style="border: 0px solid yellow; padding: 0.3% 3.5%;"></div>
+                            </div>
+                            <div class="row" style="border: 0px solid blue; width: 100%; margin: 0px;">
+                                <div class="col-10" style="border: 0px solid yellow; padding: 0.3% 6% 0 2%;">
+                                    <div class="form-group">
+                                        <label for="description" style="margin-right: 4%;">Return Status</label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="rdbtn" id="r1" value="Pending" required>
+                                            <label class="form-check-label" for="r1">Pending</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="rdbtn" id="r2" value="Clear" required>
+                                            <label class="form-check-label" for="r2">Clear</label>
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Select a valid option!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2" style="border: 0px solid yellow; padding: 0.3% 3.5%;"></div>
+                            </div>
+                            <div class="row" style="border: 0px solid blue; width: 100%; margin: 0px;">
+                                <div class="col-5" style="border: 0px solid yellow; padding: 0.3% 6% 0 2%;">
+                                    <div class="form-group"style="border: 0px solid yellow;">
+                                        <label for="pdate">Date Time</label>
+                                        <input type="text" class="form-control" id="pdate" placeholder="" readonly required>
+                                    </div>
+                                </div>
+                                <div class="col-2" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
+
+                                </div>
+                            </div>
+                            <div class="row" style="border: 0px solid blue; width: 100%; margin: 0;">
+                                <div class="col-6" style="border: 0px solid yellow; padding: 0.3% 6% 0 2%;"></div>
+                                <div class="col-6" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
+                                    <button id="returnBtn" type="submit" class="btn mb-2 loginbtn" style="background-color: #FFA64C; color: white; float: right; margin-left: 20%;">Return</button>
+                                    <button id="cancelBtn" type="button" class="btn mb-2 loginbtn" data-dismiss="modal" style="background-color: #FFA64C; color: white; float: right;">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+              </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            //current datetime
+            var today = new Date();
+            var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+            var time = today.getHours() + ":" + today.getMinutes() +  ":" + today.getSeconds();
+            var dateTime = date+' '+time;
+            console.log(dateTime);
+            // mysql connectivity
+            var mysql = require('mysql');
+            var connection = mysql.createConnection({
+              host     : 'localhost',
+              user     : 'root',
+              password : null,
+              database : 'workshop_management'
+            });
+            connection.connect();
+            const reloadBtn = document.querySelector('#reload');
+            function reload(){
+                reload = location.reload();
+            }
+            // reloadBtn.addEventListener("click", reload, false);
+            //variables for storing input field data
+            var tid, sid, fid, btype, userId, name, profile, program, pdate, catCode, specificItem, returnOption, itemCondition, description, returnStatus;
+            var output1 = "check";
+            var output2 = "check";
+            function check_id() {       //Function for checking the entered user id is valid or not and showing the next details accordingly.
+                var select = document.getElementById('user_type');
+                var value = select.options[select.selectedIndex].value;
+                userId = document.getElementById("userId").value;
+                console.log(value);
+                console.log(userId);
+                $verify_sId = "SELECT `enrolmentId`, `name`, `dept`, `stream` FROM `students` WHERE `enrolmentId` = '"+userId+"'";
+                $verify_fId = "SELECT `employeeId`, `name`, `profile` FROM `faculties` WHERE `employeeId` = '"+userId+"'";
+                if (value == "Student")
+                {
+                    connection.query($verify_sId, function (error, results, fields) {     //Executing query 1
+                        if (error) {
+                            throw error;
+                            output1 = "fail";
+                        } else if (!results.length) {
+                            if (userId == "")
+                            {
+                                document.getElementById('searchId-feedback').style.visibility = "hidden";        //error is hidden when value is empty
+                            } else {
+                                document.getElementById('searchId-feedback').style.visibility = "visible";        //error is visible when value is not found
+                                document.getElementById('searchId-feedback').style.color = "#fff";
+                                document.getElementById('searchId-feedback').style.backgroundColor = "#FF5252";
+                                document.getElementById('searchId-feedback').innerHTML = "Invalid Enrolment ID!";
+                                document.getElementById('name-row').innerHTML = "NAME";
+                                document.getElementById('userId-row').innerHTML = "USER ID";
+                                document.getElementById('profile-row').innerHTML = "PROFILE";
+                                document.getElementById('detail-1').style.display = "none";
+                                document.getElementById('detail-2').style.display = "none";
+                                document.getElementById("table-row-div").innerHTML = "";
+                            }
+                        }else {
+                            output1 = "success";
+                            console.log(results);
+                            name = results[0].name;
+                            sId = results[0].enrolmentId;
+                            profile = results[0].dept +" - "+ results[0].stream;
+                            document.getElementById('name-row').innerHTML = name;
+                            console.log(name);
+                            document.getElementById('userId-row').innerHTML = userId;
+                            console.log(userId);
+                            document.getElementById('profile-row').innerHTML = profile;
+                            console.log(profile);
+                            console.log("Valid User ID");
+                            document.getElementById('searchId-feedback').style.visibility = "visible";
+                            document.getElementById('searchId-feedback').style.color = "#fff";
+                            document.getElementById('searchId-feedback').style.backgroundColor = "#4CAF50";
+                            document.getElementById('searchId-feedback').innerHTML = "Valid Enrolment Id!";
+                            document.getElementById('detail-1').style.display = "block";
+                            document.getElementById('detail-2').style.display = "block";
+                            document.getElementById("table-row-div").innerHTML = "";
+                            fetch_trans_details();      //calling the table fetching function
+                        }
+                        console.log(output1);
+                    });
+                }
+                else if (value == "Employee") {
+                    connection.query($verify_fId, function (error, results, fields) {     //Executing query 1
+                        if (error) {
+                            throw error;
+                            output1 = "fail";
+                        } else if (!results.length) {
+                            if (userId == "")
+                            {
+                                document.getElementById('searchId-feedback').style.visibility = "hidden";        //error is hidden when value is empty
+                            } else {
+                                document.getElementById('searchId-feedback').style.visibility = "visible";        //error is visible when value is not found
+                                document.getElementById('searchId-feedback').style.color = "#fff";
+                                document.getElementById('searchId-feedback').style.backgroundColor = "#FF5252";
+                                document.getElementById('searchId-feedback').innerHTML = "Invalid Employee ID!";
+                                document.getElementById('detail-1').style.display = "none";
+                                document.getElementById('detail-2').style.display = "none";
+                                document.getElementById("table-row-div").innerHTML = "";
+                            }
+                        }else {
+                            output1 = "success";
+                            console.log(results);
+                            name = results[0].name;
+                            fId = results[0].employeeId;
+                            profile = results[0].profile;
+                            document.getElementById('name-row').innerHTML = name;
+                            console.log(name);
+                            document.getElementById('userId-row').innerHTML = userId;
+                            console.log(userId);
+                            document.getElementById('profile-row').innerHTML = profile;
+                            console.log(profile);
+                            console.log("Valid User ID");
+                            document.getElementById('searchId-feedback').style.visibility = "visible";
+                            document.getElementById('searchId-feedback').style.color = "#fff";
+                            document.getElementById('searchId-feedback').style.backgroundColor = "#4CAF50";
+                            document.getElementById('searchId-feedback').innerHTML = "Valid Employee Id!";
+                            document.getElementById('detail-1').style.display = "block";
+                            document.getElementById('detail-2').style.display = "block";
+                            document.getElementById("table-row-div").innerHTML = "";
+                            fetch_trans_details();      //calling the table fetching function
+                        }
+                        console.log(output1);
+                    });
+                }
+            }
+            function clear_id() {
+                var select = document.getElementById('user_type');
+                var value = select.options[select.selectedIndex].value;
+                document.getElementById("userId").value = "";
+                document.getElementById('detail-1').style.display = "none";
+                document.getElementById('detail-2').style.display = "none";
+                document.getElementById('name-row').innerHTML = "NAME";
+                document.getElementById('userId-row').innerHTML = "USER ID";
+                document.getElementById('profile-row').innerHTML = "PROFILE";
+                document.getElementById('searchId-feedback').style.visibility = "hidden";        //error is hidden when value is changed
+                if (value == "Student" || value == "Employee") {
+                    document.getElementById("userId").disabled = false;
+                }
+            }
+            function fetch_trans_details () {
+                var select = document.getElementById('user_type');
+                var value = select.options[select.selectedIndex].value;
+                userId = document.getElementById("userId").value;
+                console.log(value);
+                console.log(userId);
+                $fetch_s_trans = "SELECT itemT.transactionId, itemT.itemCode, itemT.issueDate, itemT.duration FROM itemtransaction itemT WHERE itemT.status = 'Issued' AND itemT.sId = '"+userId+"'";
+                $fetch_f_trans = "SELECT itemT.transactionId, itemT.itemCode, itemT.issueDate, itemT.duration FROM itemtransaction itemT WHERE itemT.status = 'Issued' AND itemT.fId = '"+userId+"'";
+                if (value == "Student")
+                {
+                    connection.query($fetch_s_trans, function (error, results, fields) {     //Executing query 1
+                        if (error) {
+                            throw error;
+                            output1 = "Fetch Student Transaction fail";
+                            let empty_div = '<div class="row text-warning" id="empty_result_div" style="border: 0px solid yellow; margin: 0px;">No Item Found!</div>';
+                            document.getElementById("table-row-div").innerHTML = empty_div;
+                        } else if (!results.length) {
+                            let empty_div = '<div class="row text-warning" id="empty_result_div" style="border: 0px solid yellow; margin: 0px;">No Item Found!</div>';
+                            document.getElementById("table-row-div").innerHTML = empty_div;
+                        }else {
+                            output1 = "Fetch Student Transaction Success";
+                            console.log(results);
+                            var string = JSON.stringify(results);
+                            var json = JSON.parse(string);
+                            console.log(json);
+                            let table = '<table class="table table-hover" id="return-table">';
+                            table += '<thead><tr><th scope="col">#</th><th scope="col">Item Code</th><th scope="col">Issue Date</th><th scope="col">Due Date</th><th scope="col">Action</th></tr></thead>';
+                            table += "<tbody>";
+                            var x = json.length;
+                            for (var i = 0; i < x; i++) {
+                                var fetch_date = json[i].issueDate;
+                                var extract_date = fetch_date.slice(0,10);
+                                console.log(extract_date);
+                                table = table + "<tr>";
+                                table = table + `<th scope="row">${i+1}</th>`;
+                                table = table + `<td>${json[i].itemCode}</td>`;
+                                table = table + `<td>${extract_date}</td>`;
+                                table = table + `<td>${json[i].duration}</td>`;
+                                table = table + `<td><button class="btn" id="${json[i].transactionId}" onclick="return_modal(this.id)" type="button" name="button" onmouseover="this.style.backgroundColor='#99E6F7'; this.style.color='#5C5C99';" onmouseout="this.style.backgroundColor='#FFA64C'; this.style.color='#fff';" style="background-color: #FFA64C; color: #fff; height: 2rem; font-size: 0.8rem;">Return</button></td>`;
+                                table = table + "</tr>";
+                            }
+                            table += "</tbody></table>";
+                            document.getElementById("table-row-div").innerHTML = table;
+                        }
+                        console.log(output1);
+                    });
+                } else if (value == "Employee") {
+                    connection.query($fetch_f_trans, function (error, results, fields) {     //Executing query 1
+                        if (error) {
+                            throw error;
+                            output1 = "Fetch Employee Transaction Fail";
+                            let empty_div = '<div class="row text-warning" id="empty_result_div" style="border: 0px solid yellow; margin: 0px;">No Item Found!</div>';
+                            document.getElementById("table-row-div").innerHTML = empty_div;
+                        } else if (!results.length) {
+                            let empty_div = '<div class="row text-warning" id="empty_result_div" style="border: 0px solid yellow; margin: 0px;">No Item Found!</div>';
+                            document.getElementById("table-row-div").innerHTML = empty_div;
+                        }else {
+                            output1 = "Fetch Employee Transaction Success";
+                            console.log(results);
+                            var string = JSON.stringify(results);
+                            var json = JSON.parse(string);
+                            console.log(json);
+                            let table = '<table class="table table-hover" id="return-table">';
+                            table += '<thead><tr><th scope="col">#</th><th scope="col">Item Code</th><th scope="col">Issue Date</th><th scope="col">Due Date</th><th scope="col">Action</th></tr></thead>';
+                            table += "<tbody>";
+                            var x = json.length;
+                            for (var i = 0; i < x; i++) {
+                                var fetch_date = json[i].issueDate;
+                                var extract_date = fetch_date.slice(0,10);
+                                var dura = parseInt(json[i].duration);
+                                console.log(extract_date);
+                                table = table + "<tr>";
+                                table = table + `<th scope="row">${i+1}</th>`;
+                                table = table + `<td>${json[i].itemCode}</td>`;
+                                table = table + `<td>${extract_date}</td>`;
+                                table = table + `<td>${dura}</td>`;
+                                table = table + `<td><button class="btn" id="${json[i].transactionId}" onclick="return_modal(this.id)" type="button" name="button" onmouseover="this.style.backgroundColor='#99E6F7'; this.style.color='#5C5C99';" onmouseout="this.style.backgroundColor='#FFA64C'; this.style.color='#fff';" style="background-color: #FFA64C; color: #fff; height: 2rem; font-size: 0.8rem;">Return</button></td>`;
+                                table = table + "</tr>";
+                            }
+                            table += "</tbody></table>";
+                            document.getElementById("table-row-div").innerHTML = table;
+                        }
+                        console.log(output1);
+                    });
+                }
+            }
+            function return_modal(Rid) {
+                $('#return-form-modal').modal('show');
+                console.log(Rid + "this is button id");
+                console.log("This is tid "+Rid);
+                document.getElementById('tid').value = Rid;
+                $fetch_trans = "SELECT it.catCode, itemT.itemCode FROM itemtransaction itemT, itemtype1 it WHERE itemT.itemCode = it.itemCode AND itemT.transactionId = '"+Rid+"'";
+                connection.query($fetch_trans, function (error, results, fields) {     //Executing query 1
+                    if (error) {
+                        throw error;
+                        output1 = "fail";
+                    } else {
+                        output1 = "success";
+                        console.log(results);
+                        catCode = results[0].catCode;
+                        specificItem = results[0].itemCode;
+                        document.getElementById('catCode').value = catCode;
+                        console.log(name);
+                        document.getElementById('specificItem').value = specificItem;
+                        document.getElementById("pdate").value = dateTime;
+                    }
+                    console.log(output1);
+                });
+            }
+            function return_item () {
+                returnOption = document.getElementById('returnOption').value;
+                console.log("Return Option: "+returnOption);
+                itemCondition = document.getElementById('itemCondition').value;
+                console.log("Item condition: "+itemCondition);
+                description = document.getElementById('description').value;
+                // if ()  {
+                //
+                // }
+                tid = document.getElementById('tid').value;
+                console.log("Return function tid: "+tid);
+                var r1 = document.getElementById('r1');
+                var r2 = document.getElementById('r2');
+                if (r1.checked == true) {
+                    returnStatus = "Pending";
+                } else if (r2.checked == true) {
+                    returnStatus = "Clear";
+                }
+                console.log("return status " + returnStatus);
+                pdate = document.getElementById('pdate').value;
+                console.log(pdate);
+                //return query
+                $return_trans = "UPDATE `itemtransaction` SET `returnDate`= '"+pdate+"',`itemCondition`= '"+itemCondition+"',`status`= '"+returnStatus+"',`description`= '"+description+"' WHERE `transactionId` = '"+tid+"'";
+                connection.query($return_trans, function (error, results, fields) {     //Executing query 1
+                    if (error) {
+                        throw error;
+                        output2 = "Return item fail";
+                    } else {
+                        output2 = "Return item success";
+                        console.log(results);
+                    }
+                    console.log(output2);
+                });
+            }
+            function change_itemCondition () {
+                var select_returnOption = document.getElementById('returnOption');
+                var value_returnOption = select_returnOption.options[select_returnOption.selectedIndex].value;
+                console.log(value_returnOption);
+                // Dynamic options for item condition on select of return options
+                if (value_returnOption == "Returnable") {
+                    let select_option = "<option selected disabled>Choose Option</option>";
+                    select_option += '<option value="Original">Original</option>'
+                    select_option += '<option value="Damaged">Damaged</option>'
+                    document.getElementById('itemCondition').disabled = false;
+                    document.getElementById('itemCondition').innerHTML = select_option;
+                } else if (value_returnOption == "Non-Returnable") {
+                    let select_option = "<option selected disabled>Choose Option</option>";
+                    select_option += '<option value="Consumed">Consumed</option>'
+                    select_option += '<option value="Misplaced">Misplaced</option>'
+                    document.getElementById('itemCondition').disabled = false;
+                    document.getElementById('itemCondition').innerHTML = select_option;
+                }
+                var select_itemCondition = document.getElementById('itemCondition');
+                var value_itemCondition = select_itemCondition.options[select_itemCondition.selectedIndex].value;
+                console.log(value_itemCondition);
+            }
+            function prevPage() {       //Function for navigating to the previous page (invemtory) by clicking on modal button
+                window.location.href = "inventory.html";
+            }
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (() => {
+              'use strict';
+              // Fetch all the forms we want to apply custom Bootstrap validation styles to
+              const forms = document.querySelectorAll('.needs-validation');
+              // Loop over them and prevent submission
+              Array.prototype.slice.call(forms).forEach((form) => {
+                form.addEventListener('submit', (event) => {
+                    if (!form.checkValidity()) {   //Here with the validation the condition is also checked for correct password  ---  || (type == "NA" || catCode == "" || categoryName == "" || itemCode == "" || spec == "" || qty == "" || cost == "" || pdate == "" )
+                        event.preventDefault();
+                        event.stopPropagation();
+                        // $('#ErrorModal').modal('show');
+                    }
+                    else {
+                        event.preventDefault();
+                        return_item();
+                        if (output2 == "Return item fail") {
+                            event.preventDefault();
+                        }
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+              });
+            })();
+
+        </script>
+    </body>
+</html>

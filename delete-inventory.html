@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="inventory-style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+        <title>AVANTI TOOL ROOM</title>
+
+    </head>
+    <body>
+        <div class="container-fluid full-height">
+            <div class="container-fluid-box">
+                <div class="container-fluid-loginbox" style="border: 0px solid blue; ">
+                    <div class="container-fluid h-100" style="border: 0px solid green;">
+                        <div class="row h-100" style="border: 0px solid red;">
+                            <div class="col-11" style="border: 0px solid violet;">
+                                <div class="row" style="border: 0px solid orange;">     <!-- This is the code for topside toolbar -->
+                                    <div class="col-3" style="border: 0px solid orange; padding-left: 6%;">
+                                        <a href="inventory.html">
+                                            <div class="row" style="border: 0px solid black; position: absolute; bottom: 0; width: 25%;">
+                                                <img src="images/back.svg" height="20rem" alt="tools">
+                                                <div style="margin-left: 10%; color: #000;">
+                                                    Back
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="row">
+                                            <div class="col-2"></div>
+                                            <div class="col-8">
+                                                <div class="row toolbar-r" style="background-color: #F3F3E6;">
+                                                    <div class="col toolbar" style="border: 0px solid black; border-radius: 0 0 0 10px;">
+                                                        <div class="container-fluid add-icon"  onmouseover="this.style.backgroundColor='#99E6F7'" onmouseout="this.style.backgroundColor='#fff'" style="border: 0px solid black; cursor: pointer; border-radius: 0 0 10px 10px; width: 50%; height: 85%; background-color: #fff">
+                                                            <a href="add-inventory.html"><img src="images/add.svg" style="top: 35%;" class="center" height="35rem" alt="tools"></a>
+                                                            <div class="row" style="position: absolute; bottom: 1%; font-size: 0.75rem; color: #5C5C99; border: 0px solid black; margin: auto; font-weight: 500;">
+                                                                Add
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col toolbar" style="border: 0px solid black;">
+                                                        <div class="container-fluid add-icon" onmouseover="this.style.backgroundColor='#99E6F7'" onmouseout="this.style.backgroundColor='#99E6F7'" style="border-bottom: 1px solid #5C5C99; border-left: 1px solid #5C5C99; border-right: 1px solid #5C5C99; box-shadow: 4px 4px 5px #aaaaaa; cursor: pointer; border-radius: 0 0 10px 10px; width: 60px; height: 45px; background-color: #99E6F7">
+                                                            <img src="images/delete.svg" style="top: 35%;" class="center" height="35rem" alt="tools"></a>
+                                                            <div class="row" style="position: absolute; bottom: 1%; font-size: 0.75rem; color: #5C5C99; border: 0px solid black; margin: auto; font-weight: 500;">
+                                                                Delete
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col toolbar" style="border: 0px solid black; border-radius: 0 0 10px 0;">
+                                                        <div class="container-fluid add-icon"  onmouseover="this.style.backgroundColor='#99E6F7'" onmouseout="this.style.backgroundColor='#fff'" style="border: 0px solid black; cursor: pointer; border-radius: 0 0 10px 10px; width: 50%; height: 85%; background-color: #fff">
+                                                            <a href="edit-inventory.html"><img src="images/edit.svg" style="top: 35%;" class="center" height="35rem" alt="tools"></a>
+                                                            <div class="row" style="position: absolute; bottom: 1%; font-size: 0.75rem; color: #5C5C99; border: 0px solid black; margin: auto; font-weight: 500;">
+                                                                Edit
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-2"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3"></div>
+                                </div>
+                                <div class="row" style="border: 0px solid yellow; margin-top: 2.5%;">   <!-- This is the code after the toolbar, next rows  -->
+                                    <div class="col" style="margin: 0; border: 0px solid red;">
+                                        <div class="row">
+                                            <h1 style="margin-left: 6%; margin-right: 3%; margin-top: 1%; border: 0px solid red; font-weight: normal;">Inventory details</h1>
+                                            <h2 style=" margin-right: 3%; margin-top: 1.5%; border: 0px solid red; font-weight: normal;">-</h2>
+                                            <h2 style=" margin-right: 3%; margin-top: 1.5%; border: 0px solid red; font-weight: normal;">Remove an item from the inventory!</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form method="post" class="needs-validation" novalidate>
+                                    <div class="row" style="border: 0px solid yellow; margin-top: 3%; padding-left: 2.5%; padding-right: 2.5%;">
+                                        <div class="col-8" style="border: 0px solid yellow; padding: 0 3.5%;">
+                                            <div class="row">
+                                                <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
+                                                    <div class="form-group">
+                                                        <label for="itemName">Item Code</label>
+                                                        <input type="text" onkeyup="fetch_item()" class="form-control" id="itemCode" placeholder="" required>
+                                                        <div class="invalid-feedback">
+                                                            Enter a valid item code!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
+                                                    <label></label>
+                                                    <div id="searchItem-feedback" class="form-control text-danger" style="visibility: hidden; border: 0px solid yellow; background-color: transparent; box-shadow: 0px 0px 0px; font-size: 1rem;">
+                                                        No Item found. Try for another!
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
+                                                    <div class="form-group">
+                                                        <label for="categoryName">Category Name</label>
+                                                        <input type="text" class="form-control" id="categoryName" placeholder="category" readonly required>
+                                                    </div>
+                                                </div>
+                                                <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
+                                                    <div class="form-group">
+                                                        <label>Item Type</label>
+                                                        <input type="text" class="form-control" id="itemType" placeholder="type" readonly required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
+                                                    <div class="form-group">
+                                                        <label for="spec">Specification</label>
+                                                        <input type="text" class="form-control" id="spec" placeholder="" readonly required>
+                                                    </div>
+                                                </div>
+                                                <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
+                                                    <div class="form-group">
+                                                        <label for="cost">Cost</label>
+                                                        <input type="text" min="1" step="0.01" class="form-control" id="cost" placeholder="" readonly required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
+                                                    <div class="form-group"style="border: 0px solid yellow;">
+                                                        <label for="pdate">Date Time</label>
+                                                        <input type="text" class="form-control" id="pdate" placeholder="" readonly required>
+                                                    </div>
+                                                </div>
+                                                <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
+
+                                                </div>
+                                            </div>
+                                            <div class="row" style="border: 0px solid black;">
+                                                <div class="col-8"></div>
+                                                <div class="col-4" style="margin-top: 3%;">
+                                                    <button id="deleteBtn" disabled type="submit" class="btn mb-2 loginbtn" style="background-color: #FFA64C; color: white; float: right; margin-left: 20%;">Delete</button>
+                                                    <button id="resetBtn" type="reset" class="btn mb-2 loginbtn" style="background-color: #FFA64C; color: white; float: right;">Reset</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4" style="border: 0px solid yellow; margin-top: 2%;">
+                                            <img class="img-fluid" src="images/w2.png" height="400px" style="margin-left: 40px; float: left;" alt="girl">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-1" style="border: 0px solid violet;">       <!-- This is the code for rightside menubar -->
+                                <div class="menubar h-100" style="position: relative; border-right: 2px solid #fff;">
+                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#FFA64C';" onmouseout="this.style.backgroundColor='transparent';" style="cursor: pointer; border-radius: 10px 0 0 10px; float: right; margin-top: 35%; width: 65%; height: 7%; background-color: transparent">
+                                        <div class="row" style="border: 0px solid black; margin-top: 5%; display: flex; flex-direction: row; justify-content: center;">
+                                            <a href="index.html"><i class="bi bi-box-arrow-right" style="font-size: 2rem; color: #fff;"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7'; this.style.color='#000';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#5C5C99';" style="cursor: pointer; border-radius: 10px 0 0 10px; float: right; margin-top: 100%; width: 80%; height: 9.5%; background-color: #fff">
+                                        <div class="row" style="border: 0px solid black; margin-top: 5%; display: flex; flex-direction: row; justify-content: center;">
+                                            <a href="issue.html"><i class="bi bi-pencil-square" style="font-size: 2rem; color: #5C5C99;"></i></a>
+                                        </div>
+                                        <div style="position: absolute; bottom: 5%; font-size: 0.8rem; margin-left: 6%; color: #5C5C99; font-weight: 500;">
+                                            Issue
+                                        </div>
+                                    </div>
+                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7'; this.style.color='#000';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#5C5C99';" style="cursor: pointer; border-radius: 10px 0 0 10px; float: right; margin-top: 40%; width: 80%; height: 9.5%; background-color: #fff">
+                                        <div class="row" style="border: 0px solid black; margin-top: 5%; display: flex; flex-direction: row; justify-content: center;">
+                                            <a href="return.html"><i class="bi bi-arrow-return-left" style="font-size: 2rem; color: #5C5C99;"></i></a>
+                                        </div>
+                                        <div style="position: absolute; bottom: 5%; font-size: 0.8rem; margin-left: 2%; color: #5C5C99; font-weight: 500;">
+                                            Return
+                                        </div>
+                                    </div>
+                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7'; this.style.color='#000';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#5C5C99';" style="cursor: pointer; border-radius: 10px 0 0 10px; float: right; margin-top: 40%; width: 80%; height: 9.5%; background-color: #fff">
+                                        <div class="row" style="border: 0px solid black; margin-top: 5%; display: flex; flex-direction: row; justify-content: center;">
+                                            <a href="people.html"><i class="bi bi-person-lines-fill" style="font-size: 2rem; color: #5C5C99;"></i></a>
+                                        </div>
+                                        <div style="position: absolute; bottom: 5%; font-size: 0.8rem; margin-left: 1%; color: #5C5C99; font-weight: 500;">
+                                            People
+                                        </div>
+                                    </div>
+                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7';" onmouseout="this.style.backgroundColor='#99E6F7';" style="cursor: pointer; border-bottom: 1px solid #5C5C99; border-left: 1px solid #5C5C99; border-top: 1px solid #5C5C99; box-shadow: -2px 2px 8px #aaaaaa; border-radius: 10px 0 0 10px; float: right; margin-top: 40%; width: 80%; height: 9.5%; background-color: #99E6F7">
+                                        <div class="row" style="border: 0px solid black; margin-top: 5%; display: flex; flex-direction: row; justify-content: center;">
+                                            <i class="bi bi-tools" style="font-size: 2rem; color: #5C5C99;"></i>
+                                        </div>
+                                        <div style="position: absolute; bottom: 5%; font-size: 0.8rem; margin-left: -11%; color: #5C5C99; font-weight: 500;">
+                                            Inventory
+                                        </div>
+                                    </div>
+                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#FFA64C'; this.style.color='#5C5C99';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#fff';" style="cursor: pointer; background-color: transparent; position: absolute; bottom: 3%; float: right;">
+                                        <div class="row" style="border: 0px solid black; margin-left: -15px;">
+                                            <i class="bi bi-info-square" style="font-size: 1.2rem; margin-left: 26%; color: #fff;"></i>
+                                            <div style="font-size: 1rem; margin-left: 7%; color: #fff;">
+                                                Help
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal HTML Insert Successful -->
+            <div id="SuccessModal" class="modal fade">
+            	<div class="modal-dialog modal-confirm">
+            		<div class="modal-content">
+            			<div class="modal-header justify-content-center">
+            				<div class="icon-box">
+            					<i class="material-icons">&#xE876;</i>
+            				</div>
+            			</div>
+            			<div class="modal-body text-center">
+            				<h4>Great!</h4>
+            				<p>Data inserted successfully.</p>
+            				<button class="btn btn-success" onclick="window.location.reload()" id="reload" data-dismiss="modal"><span>Back to Inventory</span> <i class="material-icons">&#xE5C8;</i></button>
+            			</div>
+            		</div>
+            	</div>
+            </div>
+            <!-- Modal HTML Something went Wrong -->
+            <div id="ErrorModal" class="modal fade">
+            	<div class="modal-dialog modal-confirm">
+            		<div class="modal-content" style="border: 1px solid red;">
+            			<div class="modal-header" style="border: 1px solid green; background-color: white;">
+                            <i class="bi bi-exclamation-triangle" style="color: red; font-size: 5rem;"></i>
+            			</div>
+            			<div class="modal-body text-center" style="margin: 0px;">
+            				<h4>Something went wrong</h4>
+            				<p>An unexpected error has occurred. Please try again later. Contact support if the error persists.</p>
+            				<button class="btn btn-primary" data-dismiss="modal">Go Back</button>
+            			</div>
+            		</div>
+            	</div>
+            </div>
+            <!-- Modal HTML -->
+            <div id="deleteModal" class="modal fade">
+            	<div class="modal-dialog modal-confirm">
+            		<div class="modal-content">
+            			<div class="modal-header flex-column">
+            				<div class="icon-box">
+            					<i class="material-icons">&#xE5CD;</i>
+            				</div>
+            				<h4 class="modal-title w-100">Are you sure?</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            			</div>
+            			<div class="modal-body">
+            				<p>Do you really want to delete these records? This process cannot be undone.</p>
+            			</div>
+            			<div class="modal-footer justify-content-center">
+            				<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            				<button type="button" class="btn btn-danger" onclick="delete_item()">Delete</button>
+            			</div>
+            		</div>
+            	</div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            // mysql connectivity
+            var mysql = require('mysql');
+            var connection = mysql.createConnection({
+              host     : 'localhost',
+              user     : 'root',
+              password : null,
+              database : 'workshop_management'
+            });
+            connection.connect();
+            const reloadBtn = document.querySelector('#reload');
+            function reload(){
+                reload = location.reload();
+            }
+            // reloadBtn.addEventListener("click", reload, false);
+            //variables for storing input field data
+            var itemCode, type, categoryName, spec, cost, pdate;
+            var fetch_output, output = "check";
+            // setTimeout(function () {
+            //     // Closing the alert
+            //     $('#delete_alert').alert('close');
+            // }, 2000);
+            function fetch_item() {        //Function for data insertion
+                itemCode = document.getElementById("itemCode").value;
+                console.log(itemCode);
+                //fetch query
+                $fetching_item = "SELECT inv.category, inv.type, it.size, it.cost, it.purchaseDate from itemtype1 it, inventory inv WHERE it.catCode = inv.catCode and it.itemCode = '"+itemCode+"'";
+                connection.query($fetching_item, function (error, results, fields) {     //Executing query 2
+                    if (error) {
+                        throw error;
+                        fetch_output = "fail";
+                        document.getElementById("deleteBtn").disabled = true;
+                    } else if (!results.length) {
+                        document.getElementById('searchItem-feedback').style.visibility = "visible";        //error is visible when value is not found
+                        document.getElementById("deleteBtn").disabled = true;       //button is disabled when value is not found
+                        document.getElementById("categoryName").value = "";
+                        document.getElementById("itemType").value = "";
+                        document.getElementById("spec").value = "";
+                        document.getElementById("cost").value = "";
+                        document.getElementById("pdate").value = "";
+                    } else {
+                        fetch_output = "success";
+                        document.getElementById('searchItem-feedback').style.visibility = "hidden";     //error is hidden when value is found
+                        document.getElementById("deleteBtn").disabled = false;      //button is enabled when value is found
+                        console.log(results);
+                        var string = JSON.stringify(results);
+                        var json = JSON.parse(string);
+                        categoryName = json[0].category;
+                        console.log(categoryName);
+                        type = json[0].type;
+                        console.log(type);
+                        spec = json[0].size;
+                        console.log(spec);
+                        cost = json[0].cost;
+                        console.log(cost);
+                        pdate = json[0].purchaseDate;
+                        console.log(pdate);
+                        document.getElementById("categoryName").value = categoryName;
+                        document.getElementById("itemType").value = type;
+                        document.getElementById("spec").value = spec;
+                        document.getElementById("cost").value = cost;
+                        document.getElementById("pdate").value = pdate;
+                    }
+                    console.log(output);
+                });
+            }
+            function delete_item() {
+                itemCode = document.getElementById("itemCode").value;
+                console.log(itemCode);
+                //delete query
+                $deleting_item = "DELETE FROM `itemtype1` WHERE `itemCode` = '"+itemCode+"'";
+                connection.query($deleting_item, function (error, results, fields) {     //Executing query 2
+                    if (error) {
+                        throw error;
+                        output = "fail";
+                    } else {
+                        output = "success";
+                        $('#SuccessModal').modal('show');
+                    }
+                    console.log(output);
+                });
+                prevPage();
+            }
+            function prevPage() {       //Function for navigating to the previous page (invemtory) by clicking on modal button
+                window.location.href = "delete-inventory.html";
+            }
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (() => {
+              'use strict';
+              // Fetch all the forms we want to apply custom Bootstrap validation styles to
+              const forms = document.querySelectorAll('.needs-validation');
+              // Loop over them and prevent submission
+              Array.prototype.slice.call(forms).forEach((form) => {
+                form.addEventListener('submit', (event) => {
+                    if (!form.checkValidity()) {   //Here with the validation the condition is also checked for correct password  ---  || (type == "NA" || catCode == "" || categoryName == "" || itemCode == "" || spec == "" || qty == "" || cost == "" || pdate == "" )
+                        event.preventDefault();
+                        event.stopPropagation();
+                        // $('#deleteModal').modal('show');
+                        $('#ErrorModal').modal('show');
+                    }
+                    else {
+                        event.preventDefault();
+                        $('#deleteModal').modal('show');
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+              });
+            })();
+
+        </script>
+    </body>
+</html>

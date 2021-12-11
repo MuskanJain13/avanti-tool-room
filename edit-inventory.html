@@ -3,13 +3,20 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="inventory-style.css">
+        <link rel="stylesheet" href="add-inventory-style.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
         <title>AVANTI TOOL ROOM</title>
 
     </head>
@@ -21,25 +28,43 @@
                         <div class="row h-100" style="border: 0px solid red;">
                             <div class="col-11" style="border: 0px solid violet;">
                                 <div class="row" style="border: 0px solid orange;">     <!-- This is the code for topside toolbar -->
-                                    <div class="col-3"></div>
+                                    <div class="col-3" style="border: 0px solid orange; padding-left: 6%;">
+                                        <a href="inventory.html">
+                                            <div class="row" style="border: 0px solid black; position: absolute; bottom: 0; width: 25%;">
+                                                <img src="images/back.svg" height="20rem" alt="tools">
+                                                <div style="margin-left: 10%; color: #000;">
+                                                    Back
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
                                     <div class="col-6">
                                         <div class="row">
                                             <div class="col-2"></div>
                                             <div class="col-8">
                                                 <div class="row toolbar-r" style="background-color: #F3F3E6;">
                                                     <div class="col toolbar" style="border: 0px solid black; border-radius: 0 0 0 10px;">
-                                                        <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7'" onmouseout="this.style.backgroundColor='#fff'" style="border: 0px solid black; cursor: pointer; border-radius: 0 0 10px 10px; width: 60px; height: 45px; background-color: #fff">
-                                                            <a href="add-inventory.html"><img src="images/add.svg" style="position: absolute;" class="center" height="40px" alt="tools"></a>
+                                                        <div class="container-fluid add-icon"  onmouseover="this.style.backgroundColor='#99E6F7'" onmouseout="this.style.backgroundColor='#fff'" style="border: 0px solid black; cursor: pointer; border-radius: 0 0 10px 10px; width: 50%; height: 85%; background-color: #fff">
+                                                            <a href="add-inventory.html"><img src="images/add.svg" style="top: 35%;" class="center" height="35rem" alt="tools"></a>
+                                                            <div class="row" style="position: absolute; bottom: 1%; font-size: 1.1rem; color: #5C5C99; border: 0px solid black; margin: auto; font-weight: 500;">
+                                                                Add
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="col toolbar" style="border: 0px solid black;">
-                                                        <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7'" onmouseout="this.style.backgroundColor='#fff'" style="border: 0px solid black; cursor: pointer; border-radius: 0 0 10px 10px; width: 60px; height: 45px; background-color: #fff">
-                                                            <a href="delete-inventory.html"><img src="images/delete.svg" style="position: absolute;" class="center" height="40px" alt="tools"></a>
+                                                        <div class="container-fluid add-icon"  onmouseover="this.style.backgroundColor='#99E6F7'" onmouseout="this.style.backgroundColor='#fff'" style="border: 0px solid black; cursor: pointer; border-radius: 0 0 10px 10px; width: 50%; height: 85%; background-color: #fff">
+                                                            <a href="delete-inventory.html"><img src="images/delete.svg" style="top: 35%;" class="center" height="35rem" alt="tools"></a>
+                                                            <div class="row" style="position: absolute; bottom: 1%; font-size: 1.1rem; color: #5C5C99; border: 0px solid black; margin: auto; font-weight: 500;">
+                                                                Delete
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="col toolbar" style="border: 0px solid black; border-radius: 0 0 10px 0;">
                                                         <div class="container-fluid add-icon" onmouseover="this.style.backgroundColor='#99E6F7'" onmouseout="this.style.backgroundColor='#99E6F7'" style="border-bottom: 1px solid #5C5C99; border-left: 1px solid #5C5C99; border-right: 1px solid #5C5C99; box-shadow: 4px 4px 5px #aaaaaa; cursor: pointer; border-radius: 0 0 10px 10px; width: 60px; height: 45px; background-color: #99E6F7">
-                                                            <img src="images/edit.svg" style="position: absolute;" class="center" height="40px" alt="tools">
+                                                            <img src="images/edit.svg" style="top: 35%;" class="center" height="35rem" alt="tools">
+                                                            <div class="row" style="position: absolute; bottom: 1%; font-size: 1.1rem; color: #5C5C99; border: 0px solid black; margin: auto; font-weight: 500;">
+                                                                Edit
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -52,165 +77,220 @@
                                 <div class="row" style="border: 0px solid yellow; margin-top: 2.5%;">   <!-- This is the code after the toolbar, next rows  -->
                                     <div class="col" style="margin: 0; border: 0px solid red;">
                                         <div class="row">
-                                            <h1 style="margin-left: 6%; margin-right: 3%; margin-top: 0%; border: 0px solid red; ">Inventory details</h1>
-                                            <h2 style=" margin-right: 3%; margin-top: 0.5%; border: 0px solid red;">-</h2>
-                                            <h2 style=" margin-right: 3%; margin-top: 0.5%; border: 0px solid red;">Update an item from the inventory!</h2>
+                                            <h1 style="margin-left: 6%; margin-right: 3%; margin-top: 1%; border: 0px solid red; ">Inventory details</h1>
+                                            <h2 style=" margin-right: 3%; margin-top: 1.5%; border: 0px solid red;">-</h2>
+                                            <h2 style=" margin-right: 3%; margin-top: 1.5%; border: 0px solid red;">Update an item from the inventory!</h2>
                                         </div>
                                     </div>
                                 </div>
-                                <form method="post" class="needs-validation" novalidate>
-                                    <div class="row" style="border: 0px solid yellow; margin-top: 2.5%; padding: 2.5%;">
-                                        <div class="col-8" style="border: 0px solid yellow; padding: 0 3.5%;">
-                                            <div class="row">
-                                                <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
-                                                    <div class="form-group">
-                                                        <label for="catCode">Category Code</label>
-                                                        <input type=" text" class="form-control" id="catCode" placeholder="" required>
-                                                        <div class="invalid-feedback">
-                                                            Enter a valid code!
+                                <div class="row" style="border: 0px solid yellow; margin-top: 2%; padding-left: 2.5%; padding-right: 2.5%;">
+                                    <div class="col-8" style="border: 0px solid yellow; padding: 0 3.5%;">
+                                        <ul class="nav nav-tabs" style="border: 0px solid yellow; margin-bottom: 0.5%;">
+                                            <li class="active"><a data-toggle="tab" href="#editCat">Update Category</a></li>
+                                            <li><a data-toggle="tab" href="#editItem">Update Item</a></li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade in active" id="editCat" style="border: 0px solid yellow;">
+                                                <form method="post" class="needs-validation" novalidate>
+                                                    <div class="row" style="margin-bottom: 2%;">
+                                                        <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
+                                                            <div class="form-group">
+                                                                <input type=" text" onkeyup="fetch_category()" class="form-control" id="S_catCode" placeholder="Enter category code" required>
+                                                                <div class="invalid-feedback">
+                                                                    Enter a valid code!
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
+                                                            <div id="searchCat-feedback" class="form-control text-danger" style="visibility: hidden; border: 0px solid yellow; background-color: transparent; box-shadow: 0px 0px 0px; font-size: 1.3rem;">
+                                                                No category found. Try for another!
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
-                                                    <div class="form-group">
-                                                        <label>Item Type</label><br>
-                                                        <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="r1" value="option1">
-                                                            <label class="form-check-label" for="r1">Consumable</label>
+                                                    <div class="row">
+                                                        <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
+                                                            <div class="form-group">
+                                                                <label for="catCode">Category Code</label>
+                                                                <input type=" text" class="form-control" id="catCode" placeholder="" readonly required>
+                                                                <div class="invalid-feedback">
+                                                                    Enter a valid code!
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                        <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="r2" value="option2">
-                                                            <label class="form-check-label" for="r2">Non-Consumable</label>
-                                                        </div>
-                                                        <div class="invalid-feedback">
-                                                            Enter a valid type!
+                                                        <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
+                                                            <div class="form-group">
+                                                                <label>Item Type</label><br>
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio" name="rdbtn" id="r1" value="consumable" required>
+                                                                    <label class="form-check-label" for="r1">Consumable</label>
+                                                                </div>
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio" name="rdbtn" id="r2" value="non-consumable" required>
+                                                                    <label class="form-check-label" for="r2">Non-Consumable</label>
+                                                                </div>
+                                                                <div class="invalid-feedback">
+                                                                    Enter a valid type!
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
-                                                    <div class="form-group">
-                                                        <label for="categoryName">Category Name</label>
-                                                        <input class="form-control" list="categories" name="categoryName" id="categoryName" required>
-                                                        <datalist id="categories">
-                                                            <option value="Hacksaw">
-                                                            <option value="Drill Machine">
-                                                            <option value="Hacksaw">
-                                                        </datalist>
+                                                    <div class="row">
+                                                        <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
+                                                            <div class="form-group">
+                                                                <label for="categoryName1">Category Name</label>
+                                                                <input class="form-control" list="categories" name="categoryName" id="categoryName1" maxlength="25" required>
+                                                                <datalist id="categories">
+                                                                    <option value="Hacksaw">
+                                                                    <option value="Drill Machine">
+                                                                    <option value="Hacksaw">
+                                                                </datalist>
 
-                                                        <div class="invalid-feedback">
-                                                            Enter a valid category!
+                                                                <div class="invalid-feedback">
+                                                                    Enter a valid category!
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
+                                                            <div class="form-group">
+                                                                <label for="qty">Quantity</label>
+                                                                <input type="number" min="1" class="form-control" id="qty" placeholder="" required>
+                                                                <div class="invalid-feedback">
+                                                                    Enter a valid quantity!
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
-                                                    <div class="form-group">
-                                                        <label for="itemName">Item Code</label>
-                                                        <input type="text" class="form-control" id="itemName" placeholder="" required>
-                                                        <div class="invalid-feedback">
-                                                            Enter a valid item code!
+                                                    <div class="row" style="border: 0px solid black;">
+                                                        <div class="col-8"></div>
+                                                        <div class="col-4" style="margin-top: 3%;">
+                                                            <button id="editCatBtn" type="submit" class="btn mb-2 loginbtn" style="background-color: #FFA64C; color: white; float: right; margin-left: 20%;">Submit</button>
+                                                            <button id="editResetBtn" type="reset" class="btn mb-2 loginbtn" style="background-color: #FFA64C; color: white; float: right;">Reset</button>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </form>
                                             </div>
-                                            <div class="row">
-                                                <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
-                                                    <div class="form-group">
-                                                        <label for="spec">Specification</label>
-                                                        <input type="text" class="form-control" id="spec" placeholder="" required>
-                                                        <div class="invalid-feedback">
-                                                            Enter a valid specification!
+                                            <div class="tab-pane fade" id="editItem" style="border: 0px solid yellow;">
+                                                <form method="post" class="needs-validation" novalidate>
+                                                    <div class="row" style="margin-bottom: 2%;">
+                                                        <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
+                                                            <div class="form-group">
+                                                                <input type="text" onkeyup="fetch_item()" class="form-control" id="S_itemCode" placeholder="Enter item code" required>
+                                                                <div class="invalid-feedback">
+                                                                    Enter a valid item code!
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
+                                                            <div id="searchItem-feedback" class="form-control text-danger" style="visibility: hidden; border: 0px solid yellow; background-color: transparent; box-shadow: 0px 0px 0px; font-size: 1.3rem;">
+                                                                No Item found. Try for another!
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
-                                                    <div class="form-group">
-                                                        <label for="qty">Quantity</label>
-                                                        <input type="number" min="1" class="form-control" id="qty" placeholder="" required>
-                                                        <div class="invalid-feedback">
-                                                            Enter a valid quantity!
+                                                    <div class="row">
+                                                        <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
+                                                            <div class="form-group">
+                                                                <label for="itemCode">Item Code</label>
+                                                                <input type="text" class="form-control" id="itemCode" placeholder="" readonly required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
+                                                            <div class="form-group">
+                                                                <label for="categoryName2">Category Name</label>
+                                                                <input type=" text" class="form-control" id="categoryName2" placeholder="" readonly required>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                    <div class="row">
+                                                        <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
+                                                            <div class="form-group">
+                                                                <label for="spec">Specification</label>
+                                                                <input type="text" class="form-control" id="spec" placeholder="" required>
+                                                                <div class="invalid-feedback">
+                                                                    Enter a valid specification!
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
+                                                            <div class="form-group">
+                                                                <label for="cost">Cost</label>
+                                                                <input type="number" min="1" step="0.01" class="form-control" id="cost" placeholder="" required>
+                                                                <div class="invalid-feedback">
+                                                                    Enter a valid cost!
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
+                                                            <div class="form-group">
+                                                                <label for="dead">Dead</label>
+                                                                <input type="text" class="form-control" id="dead" placeholder="" required>
+                                                                <div class="invalid-feedback">
+                                                                    Enter y(yes) or n(no)!
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;"></div>
+                                                    </div>
+                                                    <div class="row" style="border: 0px solid black;">
+                                                        <div class="col-8"></div>
+                                                        <div class="col-4" style="margin-top: 3%;">
+                                                            <button id="eidtItemBtn" type="submit" class="btn mb-2 loginbtn" style="background-color: #FFA64C; color: white; float: right; margin-left: 20%;">Submit</button>
+                                                            <button id="editResetBtn" type="reset" class="btn mb-2 loginbtn" style="background-color: #FFA64C; color: white; float: right;">Reset</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
                                             </div>
-                                            <div class="row">
-                                                <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
-                                                    <div class="form-group">
-                                                        <label for="cost">Cost</label>
-                                                        <input type="number" min="1" step="0.01" class="form-control" id="cost" placeholder="" required>
-                                                        <div class="invalid-feedback">
-                                                            Enter a valid cost!
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col" style="border: 0px solid yellow; padding: 0.3% 3.5%;">
-                                                    <div class="form-group">
-                                                        <label for="date">Date Time</label>
-                                                        <input type="datetime-local" class="form-control" id="date" placeholder="" required>
-                                                        <div class="invalid-feedback">
-                                                            Enter a valid quantity!
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row" style="border: 0px solid black;">
-                                                <div class="col-8"></div>
-                                                <div class="col-4" style="margin-top: 3%;">
-                                                    <button id="addBtn" type="submit" class="btn mb-2 loginbtn" style="background-color: #FFA64C; color: white; float: right; margin-left: 20%;">Submit</button>
-                                                    <button id="resetBtn" type="reset" class="btn mb-2 loginbtn" style="background-color: #FFA64C; color: white; float: right;">Reset</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-4" style="border: 0px solid yellow; margin-top: 2%;">
-                                            <img class="img-fluid" src="images/w2.png" height="400px" style="margin-left: 40px; float: left;" alt="girl">
                                         </div>
                                     </div>
-                                </form>
+                                    <div class="col-4" style="border: 0px solid yellow; margin-top: 2%;">
+                                        <img class="img-fluid" src="images/w2.png" height="400px" style="margin-left: 40px; float: left;" alt="girl">
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-1" style="border: 0px solid violet;">       <!-- This is the code for rightside menubar -->
                                 <div class="menubar h-100" style="position: relative; border-right: 2px solid #fff;">
                                     <div class="container-fluid" onmouseover="this.style.backgroundColor='#FFA64C';" onmouseout="this.style.backgroundColor='transparent';" style="cursor: pointer; border-radius: 10px 0 0 10px; float: right; margin-top: 35%; width: 65%; height: 7%; background-color: transparent">
-                                        <div class="row" style="border: 0px solid black; margin-left: 0px;">
-                                            <a href="index.html"><i class="bi bi-box-arrow-right" style="font-size: 2rem; color: #fff;"></i></a>
+                                        <div class="row" style="border: 0px solid black; margin-top: 18%; display: flex; flex-direction: row; justify-content: center;">
+                                            <a href="index.html"><i class="bi bi-box-arrow-right" style="font-size: 3.2rem; color: #fff;"></i></a>
                                         </div>
                                     </div>
-                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7'; this.style.color='#000';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#5C5C99';" style="cursor: pointer; border-radius: 10px 0 0 10px; float: right; margin-top: 100%; width: 75%; height: 9.5%; background-color: #fff">
-                                        <div class="row" style="border: 0px solid black; margin-left: 0px; margin-top: 5%;">
-                                            <a href="issue.html"><i class="bi bi-pencil-square" style="font-size: 2rem; color: #5C5C99;"></i></a>
+                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7'; this.style.color='#000';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#5C5C99';" style="cursor: pointer; border-radius: 10px 0 0 10px; float: right; margin-top: 100%; width: 80%; height: 9.5%; background-color: #fff">
+                                        <div class="row" style="border: 0px solid black; margin-top: 12%; display: flex; flex-direction: row; justify-content: center;">
+                                            <a href="issue.html"><i class="bi bi-pencil-square" style="font-size: 3.2rem; color: #5C5C99;"></i></a>
                                         </div>
-                                        <div style="position: absolute; bottom: 5%; font-size: 0.9rem; color: #5C5C99;">
+                                        <div style="position: absolute; bottom: 5%; font-size: 1.3rem; margin-left: 6%; color: #5C5C99; font-weight: 500;">
                                             Issue
                                         </div>
                                     </div>
-                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7'; this.style.color='#000';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#5C5C99';" style="cursor: pointer; border-radius: 10px 0 0 10px; float: right; margin-top: 40%; width: 75%; height: 9.5%; background-color: #fff">
-                                        <div class="row" style="border: 0px solid black; margin-left: 0px; margin-top: 5%;">
-                                            <a href="return.html"><i class="bi bi-arrow-return-left" style="font-size: 2rem; color: #5C5C99;"></i></a>
+                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7'; this.style.color='#000';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#5C5C99';" style="cursor: pointer; border-radius: 10px 0 0 10px; float: right; margin-top: 40%; width: 80%; height: 9.5%; background-color: #fff">
+                                        <div class="row" style="border: 0px solid black; margin-top: 12%; display: flex; flex-direction: row; justify-content: center;">
+                                            <a href="return.html"><i class="bi bi-arrow-return-left" style="font-size: 3.2rem; color: #5C5C99;"></i></a>
                                         </div>
-                                        <div style="position: absolute; bottom: 5%; font-size: 0.9rem; color: #5C5C99;">
+                                        <div style="position: absolute; bottom: 5%; font-size: 1.3rem; margin-left: 2%; color: #5C5C99; font-weight: 500;">
                                             Return
                                         </div>
                                     </div>
-                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7'; this.style.color='#000';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#5C5C99';" style="cursor: pointer; border-radius: 10px 0 0 10px; float: right; margin-top: 40%; width: 75%; height: 9.5%; background-color: #fff">
-                                        <div class="row" style="border: 0px solid black; margin-left: 0px; margin-top: 5%;">
-                                            <a href="people.html"><i class="bi bi-person-lines-fill" style="font-size: 2rem; color: #5C5C99;"></i></a>
+                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7'; this.style.color='#000';" onmouseout="this.style.backgroundColor='#fff'; this.style.color='#5C5C99';" style="cursor: pointer; border-radius: 10px 0 0 10px; float: right; margin-top: 40%; width: 80%; height: 9.5%; background-color: #fff">
+                                        <div class="row" style="border: 0px solid black; margin-top: 12%; display: flex; flex-direction: row; justify-content: center;">
+                                            <a href="people.html"><i class="bi bi-person-lines-fill" style="font-size: 3.2rem; color: #5C5C99;"></i></a>
                                         </div>
-                                        <div style="position: absolute; bottom: 5%; font-size: 0.9rem; color: #5C5C99;">
+                                        <div style="position: absolute; bottom: 5%; font-size: 1.3rem; margin-left: 1%; color: #5C5C99; font-weight: 500;">
                                             People
                                         </div>
                                     </div>
-                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7';" onmouseout="this.style.backgroundColor='#99E6F7';" style="cursor: pointer; border-bottom: 1px solid #5C5C99; border-left: 1px solid #5C5C99; border-top: 1px solid #5C5C99; box-shadow: -2px 2px 5px #aaaaaa; border-radius: 10px 0 0 10px; float: right; margin-top: 40%; width: 75%; height: 9.5%; background-color: #99E6F7">
-                                        <div class="row" style="border: 0px solid black; margin-left: 0px; margin-top: 5%;">
-                                            <i class="bi bi-tools" style="font-size: 2rem; color: #5C5C99;"></i>
+                                    <div class="container-fluid" onmouseover="this.style.backgroundColor='#99E6F7';" onmouseout="this.style.backgroundColor='#99E6F7';" style="cursor: pointer; border-bottom: 1px solid #5C5C99; border-left: 1px solid #5C5C99; border-top: 1px solid #5C5C99; box-shadow: -2px 2px 8px #aaaaaa; border-radius: 10px 0 0 10px; float: right; margin-top: 40%; width: 80%; height: 9.5%; background-color: #99E6F7">
+                                        <div class="row" style="border: 0px solid black; margin-top: 12%; display: flex; flex-direction: row; justify-content: center;">
+                                            <i class="bi bi-tools" style="font-size: 3.2rem; color: #5C5C99;"></i>
                                         </div>
-                                        <div style="position: absolute; bottom: 5%; font-size: 0.9rem; color: #5C5C99;">
-                                            Tools
+                                        <div style="position: absolute; bottom: 5%; font-size: 1.3rem; margin-left: -11%; color: #5C5C99; font-weight: 500;">
+                                            Inventory
                                         </div>
                                     </div>
                                     <div class="container-fluid" onmouseover="this.style.backgroundColor='#FFA64C'; this.style.color='#5C5C99';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#fff';" style="cursor: pointer; background-color: transparent; position: absolute; bottom: 3%; float: right;">
                                         <div class="row" style="border: 0px solid black; margin-left: -15px;">
-                                            <i class="bi bi-info-square" style="font-size: 1.2rem; margin-left: 26%; color: #fff;"></i>
-                                            <div style="font-size: 1rem; margin-left: 7%; color: #fff;">
+                                            <i class="bi bi-info-square" style="font-size: 1.9rem; margin-left: 26%; color: #fff;"></i>
+                                            <div style="font-size: 1.58rem; font-weight: 100; margin-left: 7%; color: #fff;">
                                                 Help
                                             </div>
                                         </div>
@@ -220,9 +300,224 @@
                         </div>
                     </div>
                 </div>
-            </div
+            </div>
+            <!-- Modal HTML Insert Successful -->
+            <div id="SuccessModal" class="modal fade">
+            	<div class="modal-dialog modal-confirm">
+            		<div class="modal-content">
+            			<div class="modal-header justify-content-center">
+            				<div class="icon-box">
+            					<i class="material-icons">&#xE876;</i>
+            				</div>
+            			</div>
+            			<div class="modal-body text-center">
+            				<h4>Great!</h4>
+            				<p>Data inserted successfully.</p>
+            				<button class="btn btn-success" onclick="window.location.reload()" id="reload" data-dismiss="modal"><span>Back to Inventory</span> <i class="material-icons">&#xE5C8;</i></button>
+            			</div>
+            		</div>
+            	</div>
+            </div>
+            <!-- Modal HTML Something went Wrong -->
+            <div id="ErrorModal" class="modal fade">
+            	<div class="modal-dialog modal-confirm">
+            		<div class="modal-content" style="border: 1px solid red;">
+            			<div class="modal-header" style="border: 1px solid green; background-color: white;">
+                            <i class="bi bi-exclamation-triangle" style="color: red; font-size: 5rem;"></i>
+            			</div>
+            			<div class="modal-body text-center" style="margin: 0px;">
+            				<h4>Something went wrong</h4>
+            				<p>An unexpected error has occurred. Please try again later. Contact support if the error persists.</p>
+            				<button class="btn btn-primary" data-dismiss="modal">Go Back</button>
+            			</div>
+            		</div>
+            	</div>
+            </div>
         </div>
+        <script type="text/javascript">
+            // mysql connectivity
+            var mysql = require('mysql');
+            var connection = mysql.createConnection({
+              host     : 'localhost',
+              user     : 'root',
+              password : null,
+              database : 'workshop_management'
+            });
+            connection.connect();
+            const reloadBtn = document.querySelector('#reload');
+            function reload(){
+                reload = location.reload();
+            }
+            reloadBtn.addEventListener("click", reload, false);
+            // variables for storing input field data
+            var itemCode, S_itemCode, catCode, S_catCode, type, categoryName1, categoryName2, spec, qty, cost, dead;
+            var r1, r2, new_type, new_categoryName1, new_qty, new_spec, new_cost, new_dead;
+            var output1, output2 = "check";
+            // setTimeout(function () {
+            //     // Closing the alert
+            //     $('#delete_alert').alert('close');
+            // }, 2000);
+            function fetch_category() {        //Function for data insertion
+                S_catCode = document.getElementById("S_catCode").value;
+                console.log(S_catCode);
+                //fetch query
+                $fetching_cat = "SELECT inv.catCode, inv.type, inv.category, inv.t_qty from inventory inv WHERE inv.catCode = '"+S_catCode+"'";
+                connection.query($fetching_cat, function (error, results, fields) {     //Executing query 2
+                    if (error) {
+                        throw error;
+                        output = "Cat fetch fail";
+                    } else if (!results.length) {
+                        document.getElementById('searchCat-feedback').style.visibility = "visible";
+                        document.getElementById("catCode").value = "";
+                        document.getElementById("r1").checked = false;
+                        document.getElementById("r2").checked = false;
+                        document.getElementById("categoryName1").value = "";
+                        document.getElementById("qty").value = "";
+                    } else {
+                        output = "Cat fetch success";
+                        document.getElementById('searchCat-feedback').style.visibility = "hidden";
+                        console.log(results);
+                        var string = JSON.stringify(results);
+                        var json = JSON.parse(string);
+                        catCode = json[0].catCode;
+                        console.log(catCode);
+                        type = json[0].type;
+                        console.log(type);
+                        categoryName1 = json[0].category;
+                        console.log(categoryName1);
+                        // var c_qty = json[0].t_qty;
+                        // qty = parseInt(c_qty, 10);
+                        // console.log(parseInt(json[0].t_qty, 10));
+                        qty = json[0].t_qty;
+                        console.log(qty);
+                        document.getElementById("catCode").value = catCode;
+                        if (type == "Consumable" || type == "consumable")
+                            document.getElementById("r1").checked = true;
+                        else if (type == "Non-consumable" || type == "non-consumable")
+                            document.getElementById("r2").checked = true;
+                        document.getElementById("categoryName1").value = categoryName1;
+                        document.getElementById("qty").value = qty;
+                    }
+                    console.log(output);
+                });
+            }
+            function fetch_item() {        //Function for data insertion
+                S_itemCode = document.getElementById("S_itemCode").value;
+                console.log(S_itemCode);
+                //fetch query
+                $fetching_item = "SELECT it.itemCode, inv.category, it.size, it.cost, it.dead from inventory inv, itemtype1 it WHERE it.catCode = inv.catCode and it.itemCode = '"+S_itemCode+"'";
+                connection.query($fetching_item, function (error, results, fields) {     //Executing query 2
+                    if (error) {
+                        throw error;
+                        output = "Item fetch fail";
+                    } else if (!results.length) {
+                        document.getElementById('searchItem-feedback').style.visibility = "visible";
+                        document.getElementById("itemCode").value = "";
+                        document.getElementById("categoryName2").value = "";
+                        document.getElementById("spec").value = "";
+                        document.getElementById("cost").value = "";
+                        document.getElementById("dead").value = "";
+                    } else {
+                        output = "Item Fetch success";
+                        document.getElementById('searchItem-feedback').style.visibility = "hidden";
+                        console.log(results);
+                        var string = JSON.stringify(results);
+                        var json = JSON.parse(string);
+                        itemCode = json[0].itemCode;
+                        console.log(itemCode);
+                        categoryName2 = json[0].category;
+                        console.log(categoryName2);
+                        spec = json[0].size;
+                        console.log(spec);
+                        cost = json[0].cost;
+                        console.log(cost);
+                        dead = json[0].dead;
+                        console.log(dead);
 
+                        document.getElementById("itemCode").value = itemCode;
+                        document.getElementById("categoryName2").value = categoryName2;
+                        document.getElementById("spec").value = spec;
+                        document.getElementById("cost").value = cost;
+                        document.getElementById("dead").value = dead;
+                        // $('#SuccessModal').modal('show');
+                    }
+                    console.log(output);
+                });
+            }
+            function update_cat() {
+                S_catCode = document.getElementById("S_catCode").value;
+                console.log(S_catCode);
+                new_categoryName1 = document.getElementById("categoryName1").value;
+                r1 = document.getElementById("r1");
+                r2 = document.getElementById("r2");
+                if (r1.checked == true)
+                    new_type = "Consumable";
+                else if (r2.checked == true)
+                    new_type = "Non-consumable";
+                else
+                    new_type = "NA";
+                new_qty = document.getElementById("qty").value;
+                //update query
+                $updating_cat = "UPDATE `inventory` SET `category`= '"+new_categoryName1+"',`type`= '"+new_type+"',`t_qty`= '"+new_qty+"' WHERE `catCode` = '"+S_catCode+"'";
+                connection.query($updating_cat, function (error, results, fields) {     //Executing query 2
+                    if (error) {
+                        throw error;
+                        output1 = "Update cat fail";
+                    } else {
+                        output1 = "Update cat success";
+                        $('#SuccessModal').modal('show');
+                    }
+                    console.log(output1);
+                });
+            }
+            function update_item() {
+                S_itemCode = document.getElementById("S_itemCode").value;
+                console.log(S_itemCode);
+                new_spec = document.getElementById("spec").value;
+                new_cost = document.getElementById("cost").value;
+                new_dead = document.getElementById("dead").value;
+                //update query
+                $updating_item = "UPDATE `itemtype1` SET `size`= '"+new_spec+"',`cost`="+new_cost+",`dead`= '"+new_dead+"' WHERE `itemCode` = '"+S_itemCode+"'";
+                connection.query($updating_item, function (error, results, fields) {     //Executing query 2
+                    if (error) {
+                        throw error;
+                        output2 = "Update item fail";
+                    } else {
+                        output2 = "Update item success";
+                        $('#SuccessModal').modal('show');
+                    }
+                    console.log(output2);
+                });
+            }
+            // function prevPage() {       //Function for navigating to the previous page (invemtory) by clicking on modal button
+            //     window.location.href = "edit-inventory.html";
+            // }
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (() => {
+              'use strict';
+              // Fetch all the forms we want to apply custom Bootstrap validation styles to
+              const forms = document.querySelectorAll('.needs-validation');
+              // Loop over them and prevent submission
+              Array.prototype.slice.call(forms).forEach((form) => {
+                form.addEventListener('submit', (event) => {
+                    if (!form.checkValidity()) {   //Here with the validation the condition is also checked for correct password  ---  || (type == "NA" || catCode == "" || categoryName == "" || itemCode == "" || spec == "" || qty == "" || cost == "" || pdate == "" )
+                        event.preventDefault();
+                        event.stopPropagation();
+                        $('#ErrorModal').modal('show');
+                    }
+                    else {
+                        event.preventDefault();
+                        update_cat();
+                        update_item();
+                        if (output1 == "fail" || output2 == "fail") {
+                            event.preventDefault();
+                        }
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+              });
+            })();
 
+        </script>
     </body>
 </html>
